@@ -12,7 +12,7 @@ def call(def abortOnQualityGateFailure = false, def abortPipeline = false) {
             
             if (abortOnQualityGateFailure) {
                 error("Quality Gate falló.")
-            } else if (currentBranch == 'master' || currentBranch.startsWith('hotfix')) {
+            } else if (currentBranch == 'main' || currentBranch.startsWith('hotfix')) {
                 error("Quality Gate falló en una rama crítica.")
             }
         }
